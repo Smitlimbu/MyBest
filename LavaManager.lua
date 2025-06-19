@@ -6,10 +6,8 @@ local TweenService: TweenService = game:GetService("TweenService")
 local Players: Players = game:GetService("Players")
 
 -- local functions
-local function checkNil(self)
-	if self.lavaBlock == nil then
-		warn("lavaBlock is nil")
-	end
+local function validateConfig(config)
+	assert(config.lavaBlock, "config parameter 'lavaBlock' is missing")
 end
 
 local function setAttribute(player: Player)
