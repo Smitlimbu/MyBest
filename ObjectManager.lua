@@ -95,10 +95,10 @@ local function spawnObjects(self)
 end
 
 local function validateConfig(config)
-	assert(config.objectsFolder, "objectsFolder is required")
-	assert(config.spawner, "spawner is required")
-	assert(config.spawnedStorage, "spawnedStorage is required")
-	assert(config.spawnInterval, "spawnInterval is required")
+	assert(config.objectsFolder, "config parameter 'objectsFolder' is missing")
+	assert(config.spawner, "config parameter 'spawner' is missing")
+	assert(config.spawnedStorage, "config parameter 'spawnedStorage' is missing")
+	assert(config.spawnInterval, "config parameter 'spawnInterval' is missing")
 end
 
 function ObjectManager.new(config)
